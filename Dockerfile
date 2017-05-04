@@ -2,7 +2,7 @@ FROM cheggwpt/nginx:latest
 
 ENV yarn_version 0.19.1
 
-RUN	apk --update --no-cache add nodejs curl gnupg && \
+RUN	apk --update --no-cache add nodejs curl gnupg git && \
 	curl -o- -L \
 	https://yarnpkg.com/install.sh \
 	| bash -s -- --version ${yarn_version} && \
